@@ -1,0 +1,9 @@
+[Unit]
+Description=Send Systemd Notifications to Telegram
+
+[Service]
+Type=oneshot
+ExecStart=/home/user/scripts/service_notifications/telegram.sh -s %i
+WorkingDirectory=/home/user/scripts/service_notifications
+[Install]
+WantedBy=multi-user.target
