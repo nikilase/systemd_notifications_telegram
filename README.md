@@ -1,6 +1,8 @@
 # Easy Telegram Notifications For Failed Services
 Adapted from [baeldung.com](https://www.baeldung.com/linux/systemd-service-fail-notification)
 
+Need to create a bot first using the BotFather see [here](https://core.telegram.org/bots/features#botfather)
+
 ## Script "Installation"
 Create *config.conf* by copying the *template.conf* file and inserting the correct values.
 
