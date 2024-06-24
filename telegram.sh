@@ -39,8 +39,8 @@ FOOTER_TEXT="Sent on $(date)"
 MKDWN="🔴*$TITLE_TEXT*
 _$FOOTER_TEXT _"
 # End of Variables
-
-curl -X POST -H 'Content-Type: application/json' -d '{"chat_id": "'"$TELEGRAM_CHAT_ID"'", "parse_mode": "MarkdownV2", "text": "'"$MKDWN"'"}' "$TELEGRAM_URL"
+ESCAPED=$(echo "$MKDWN" | sed -e 's/-/\\\\-/g' -e 's/\./\\\\./g')
+curl -X POST -H 'Content-Type: application/json' -d '{"chat_id": "'"$TELEGRAM_CHAT_ID"'", "parse_mode": "MarkdownV2", "text": "'"$ESCAPED"'"}' "$TELEGRAM_URL"
 
 # Exit with success code
 exit 0
