@@ -3,6 +3,10 @@ Adapted from [baeldung.com](https://www.baeldung.com/linux/systemd-service-fail-
 
 Need to create a bot first using the BotFather see [here](https://core.telegram.org/bots/features#botfather)
 
+Then get the user id of the user you want to send the message to. \
+Can be done by first sending a message to the bot and then calling following API to find all messages (and user ids of them) sent to the bot. \
+`https://api.telegram.org/bot<YOUR_BOT_TOKEN>/getUpdates`
+
 ## Script "Installation"
 Create *config.conf* by copying the *template.conf* file and inserting the correct values.
 
